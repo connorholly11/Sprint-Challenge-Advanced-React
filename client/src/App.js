@@ -11,14 +11,6 @@ class App extends React.Component{
       players:[]
     }
     }
-  // componentDidMount(){
-  //   console.log('CDM WORKING')
-  //   axios
-  //     .get('http://localhost:5000/api/players')
-  //     // .then(response => console.log(response.data))
-  //     //IF I CANCEL OUT THIS CONSOLE LOG ^^^ THEN PLAYERS GETS FILLED WITH RESPONSE DATA, IF NOT THEN IT DOESNT, WHY????
-  //     .then(response => this.setState({players: response.data}))
-  // }
 
   componentDidMount(){
     console.log('CDM WORKING')
