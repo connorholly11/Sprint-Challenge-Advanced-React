@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
+import PlayerCard from './components/PlayerCard';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(){
+    console.log('constructor working')
+    super()
+    this.state = {
+      players:[]
+    }
+    }
+
+  componentDidMount(){
+    console.log('CDM WORKING')
+    axios
+      .get('http://localhost:5000/api/players')
+      // .then(response => console.log(response.data))
+      //IF I CANCEL OUT THIS CONSOLE LOG ^^^ THEN PLAYERS GETS FILLED WITH RESPONSE DATA, IF NOT THEN IT DOESNT, WHY????
+      .then(response => this.setState({players: response.data}))
+  }
+
+  render(){
+    console.log('render working')
+    console.log('state', this.state.players)
+    return(
+      <div>
+        <h1>HELLO WORLD</h1>
+
+        {this.state.players.map(player => {
+          return <PlayerCard key={player.id} player={player.name}/>
+        })}
+        {/* {PlayerCard} */}
+      </div>
+    )
+  }
 }
 
 export default App;
