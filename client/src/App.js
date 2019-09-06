@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
-import axiosCall from './customHooks/axiosCall';
-import PlayerCard from './components/playerCard'
+import PlayerCard from './components/PlayerCard';
 
 class App extends React.Component{
   constructor(){
@@ -40,6 +39,7 @@ class App extends React.Component{
         {this.state.players.map(player => {
           return <PlayerCard player={player.name}/>
         })}
+        {/* {PlayerCard} */}
       </div>
     )
   }
