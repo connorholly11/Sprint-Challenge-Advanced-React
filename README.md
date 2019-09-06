@@ -1,3 +1,16 @@
+* Why would you use class component over function components (removing hooks from the question)?
+    * Because you have more options to change things in the lifecycle. Hooks are easier, but allow you less options in your code. Also there will still be a lot of companies using class components
+*  Name three lifecycle methods and their purposes.
+    * mounting - this is setting birth to your component and setting everything up
+    * updating - this is when your component lives and needs updates to it
+    * unmounting - this is killing your component from the browser and taking it off
+*  What is the purpose of a custom hook?
+    * Instead of writing the same code over and over. We can make it faster if we create a custom hook and then reuse it constantly 
+*  Why is it important to test our apps?
+    * To debug faster and we can also see which parts are individually working instead of trying to go through the whole code to see which line/lines are messed up 
+
+
+
 # Sprint Challenge: Advanced React - Women's World Cup
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored class components, custom hooks, and testing. In your challenge for this Sprint, you will demonstrate proficiency by creating an application that consumes data from an API using a custom hook, displays that data on the DOM, and tests your React components.
