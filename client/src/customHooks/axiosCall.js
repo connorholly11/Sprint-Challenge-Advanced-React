@@ -28,6 +28,6 @@ export const useAxiosCall = (request) => {
             })
     }, [request.url])
 
-    return [response];
+    return [response.data];
 }
 

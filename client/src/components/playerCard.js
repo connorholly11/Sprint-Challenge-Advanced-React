@@ -12,8 +12,10 @@ const PlayerCard = (props) => {
     return(
         
         <div>
-            {/* <h1>{apicall}</h1> */}
-            <p>{props.player}</p>
+            {/* {apiCall.map(player => {
+                return player={player}
+            })} */}
+            {props.player}
         </div>
     )
 }

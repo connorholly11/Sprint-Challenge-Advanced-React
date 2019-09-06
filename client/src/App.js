@@ -37,7 +37,7 @@ class App extends React.Component{
         <h1>HELLO WORLD</h1>
 
         {this.state.players.map(player => {
-          return <PlayerCard player={player.name}/>
+          return <PlayerCard key={player.id} player={player.name}/>
         })}
         {/* {PlayerCard} */}
       </div>
