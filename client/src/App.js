@@ -7,7 +7,7 @@ class App extends React.Component{
     console.log('constructor working')
     super()
     this.state = {
-      hello:{}
+      players:[]
     }
 
     
@@ -17,12 +17,14 @@ class App extends React.Component{
     console.log('CDM WORKING')
     axios
       .get('http://localhost:5000/api/players')
-      .then((response) => console.log(response))
-      .then(response => this.setState({hello:response}))
+      // .then(response => console.log(response.data))
+      //IF I CANCEL OUT THIS CONSOLE LOG ^^^ THEN PLAYERS GETS FILLED WITH RESPONSE DATA, IF NOT THEN IT DOESNT, WHY????
+      .then(response => this.setState({players: response.data}))
   }
 
   render(){
     console.log('render working')
+    console.log('state', this.state)
     return(
       <div>
         <h1>HELLO WORLD</h1>
