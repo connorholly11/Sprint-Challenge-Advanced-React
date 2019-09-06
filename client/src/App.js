@@ -24,10 +24,13 @@ class App extends React.Component{
 
   render(){
     console.log('render working')
-    console.log('state', this.state)
+    console.log('state', this.state.players)
     return(
       <div>
         <h1>HELLO WORLD</h1>
+        {this.state.players.map(player => {
+          return player=[player.name]
+        })}
       </div>
     )
   }
