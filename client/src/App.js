@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
+import axiosCall from './customHooks/axiosCall';
 
 class App extends React.Component{
   constructor(){
@@ -31,6 +32,7 @@ class App extends React.Component{
         {this.state.players.map(player => {
           return player=[player.name]
         })}
+        
       </div>
     )
   }
